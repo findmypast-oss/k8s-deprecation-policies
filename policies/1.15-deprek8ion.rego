@@ -50,6 +50,7 @@ _warn = msg {
   input.apiVersion == apis[_]
   input.kind == "PriorityClass"
   msg := sprintf("%s/%s: API %s for PriorityClass has been deprecated, use scheduling.k8s.io/v1 instead.", [input.kind, input.metadata.name, input.apiVersion])
+}
 
 # HorizontalPodAutoscaler Deployment definition resources
 _warn = msg {
